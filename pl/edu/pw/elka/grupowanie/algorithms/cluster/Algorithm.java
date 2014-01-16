@@ -1,0 +1,22 @@
+package pl.edu.pw.elka.grupowanie.algorithms.cluster;
+
+import java.util.Set;
+
+import edu.uci.ics.jung.graph.Graph;
+
+/**
+ * Unifying interface for all implemented algorithms.
+ * @author Wojciech Kaczorowski
+ * @param <V> type for vertices of graph
+ * @param <E> type for edges of graph
+ *
+ */
+public interface Algorithm<V, E> {
+
+	/**
+	 * Get unique set of found groups, each set represent one group.
+	 * @return 
+	 */
+	Set<Set<V>> getCommunities(Graph<V, E> G);
+
+}
